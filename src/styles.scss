@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'josefin-sans', sans-serif;
+    font-weight: 400;
+    color: #F8F5EC;
+
+}
+
+@font-face {
+    font-family: 'Anta';
+    src: url('assets/fonts/anta-v1-latin-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

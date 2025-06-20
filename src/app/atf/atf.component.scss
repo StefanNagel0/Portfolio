@@ -1,0 +1,119 @@
+.atf-container {
+    display: flex;
+    height: 746px;
+    width: 90%;
+    margin: auto;
+    padding-top: 41px;
+    background-color: #b42148;
+    max-width: 1440px;
+    justify-content: space-between;
+}
+
+.background-image {
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 580px;
+    height: 616px;
+    background-image: url('/assets/img/header/picture_bg_default.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.portfolio-img-container img {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    height: 683px;
+    width: 535px;
+    padding-left: 25px;
+}
+
+.portfolio-img-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.user-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.atf-logo-socials {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.social-media-icons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.social-media-icon {
+    width: 30px;
+    height: 30px;
+}
+
+[id^="social-media-"] {
+    transition: background-image 125ms ease-in-out;
+}
+
+#social-media-email {
+    background-image: url('/assets/img/social_media/email/email_default.png');
+    &:hover {
+        background-image: url('/assets/img/social_media/email/email_hover_blue.png');
+    }
+}
+
+#social-media-github {
+    background-image: url('/assets/img/social_media/github/github_default.png');
+    &:hover {
+        background-image: url('/assets/img/social_media/github/github_hover_blue.png');
+    }
+}
+
+#social-media-linkedin {
+    background-image: url('/assets/img/social_media/linkedin/linkedin_default.png');
+    &:hover {
+        background-image: url('/assets/img/social_media/linkedin/linkedin_hover_blue.png');
+    }
+}
+
+
+.atf-user-info {
+    text-align: center;
+}
+
+.atf-user-info h1 {
+    font-size: 88px;
+    font-family: 'Anta', sans-serif;
+    line-height: 120%;
+}
+
+.atf-user-info h2 {
+    font-size: 40px;
+}
+
+.arrow-down {
+    width: 38px;
+    height: 89px;
+    background-image: url('/assets/img/arrow/arrow_default.png');
+    cursor: pointer;
+    transition: background-image 125ms ease-in-out;
+}
+
+.arrow-down:hover {
+    background-image: url('/assets/img/arrow/arrow_hover.png');
+}
