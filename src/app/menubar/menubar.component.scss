@@ -1,0 +1,143 @@
+.menubar-container-bg{
+    background-color:#89BCD9 ;
+    width: 100%;
+    max-width: 1440px;
+    z-index: 3;
+    position: relative;
+    margin: auto;
+}
+
+
+
+.menubar-container{
+    width: 90%;
+    margin: auto;
+    height: 104px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 196px;
+}
+
+.menu-buttons a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 125ms ease;
+}
+
+.menu-buttons span{
+    font-size: 26px;
+    color: #262E34;
+    font-weight: 500;
+    line-height: 120%;
+    text-align: center;
+    transition: all 125ms ease;
+}
+
+.menu-buttons a.active span {
+    background-image: url('/assets/img/menubar/Ellipse 24.png');
+    background-size: cover;
+    height: 40px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #F8F5EC;
+}
+
+
+.menu-buttons a:hover:not(.active) span {
+    color: #F8F5EC;
+}
+
+.menu-buttons:hover a.active span {
+    background-image: none;
+    height: auto;
+    width: auto;
+    display: initial;
+    color: #262E34;
+}
+
+.menu-buttons a span:hover {
+    color: #F8F5EC !important;
+}
+
+.menu-buttons a.active span:hover {
+    background-image: url('/assets/img/menubar/Ellipse 24.png') !important;
+    background-size: cover !important;
+    height: 40px !important;
+    width: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.translate-button {
+    display: flex;
+    gap: 8px;
+}
+
+.translate-button span {
+    color: #262E34;
+    font-size: 18px;
+    line-height: 120%;
+    cursor: pointer;
+    transition: all 125ms ease;
+    
+    &.active {
+        background-image: url('/assets/img/menubar/Ellipse 24.png');
+        background-size: cover;
+        height: auto;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: #F8F5EC;
+    }
+    
+    &:hover:not(.active) {
+        color: #F8F5EC;
+    }
+}
+
+.translate-button:hover span.active {
+    background-image: none;
+    height: auto;
+    width: auto;
+    display: initial;
+    color: #262E34;
+}
+
+.translate-button span:hover {
+    color: #F8F5EC !important;
+}
+
+.translate-button span.active:hover {
+    background-image: url('/assets/img/menubar/Ellipse 24.png') !important;
+    background-size: cover !important;
+    height: auto !important;
+    width: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.dark-logo img{
+    width: 66px;
+    height: 73px;
+}

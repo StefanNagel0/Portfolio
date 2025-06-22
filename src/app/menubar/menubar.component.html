@@ -1,0 +1,25 @@
+<section class="menubar-container-bg">
+    <div class="menubar-container">
+        <div class="dark-logo">
+            <img src="assets/img/logo/logo_blue.png" alt="logo_dark">
+        </div>
+        <div class="menu-buttons">
+            <a href="#" [class.active]="activeMenuItem === 'Why me'" (click)="setActiveMenuItem('Why me')">
+                <span>Why me</span>
+            </a>
+            <a href="#" [class.active]="activeMenuItem === 'Skills'" (click)="setActiveMenuItem('Skills')">
+                <span>Skills</span>
+            </a>
+            <a href="#" [class.active]="activeMenuItem === 'Projects'" (click)="setActiveMenuItem('Projects')">
+                <span>Projects</span>
+            </a>
+            <a href="#" [class.active]="activeMenuItem === 'Contact'" (click)="setActiveMenuItem('Contact')">
+                <span>Contact</span>
+            </a>
+        </div>
+        <div class="translate-button">
+            <span [class.active]="activeLanguage === 'DE'" (click)="setActiveLanguage('DE')">DE</span>
+            <span [class.active]="activeLanguage === 'EN'" (click)="setActiveLanguage('EN')">EN</span>
+        </div>
+    </div>
+</section>

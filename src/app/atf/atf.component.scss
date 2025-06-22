@@ -4,7 +4,6 @@
     width: 90%;
     margin: auto;
     padding-top: 41px;
-    background-color: #b42148;
     max-width: 1440px;
     justify-content: space-between;
 }
@@ -89,6 +88,11 @@
     &:hover {
         background-image: url('/assets/img/social_media/linkedin/linkedin_hover_blue.png');
     }
+}
+
+.user-logo img{
+    width: 66px;
+    height: 73px;
 }
 
 
