@@ -88,5 +88,9 @@ p {
     color: #89BCD9;
     font-size: 18px;
     line-height: 120%;
-    cursor: pointer;
+    transition: background-color 125ms ease-in-out;
+
+    &:hover {
+        background-color: #3F464A;
+    }
 }
