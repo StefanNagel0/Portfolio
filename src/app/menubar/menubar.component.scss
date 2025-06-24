@@ -1,5 +1,5 @@
-.menubar-container-bg{
-    background-color:#89BCD9 ;
+.menubar-container-bg {
+    background-color: #89BCD9;
     width: 100%;
     max-width: 1440px;
     z-index: 3;
@@ -7,9 +7,7 @@
     margin: auto;
 }
 
-
-
-.menubar-container{
+.menubar-container {
     width: 90%;
     margin: auto;
     height: 104px;
@@ -17,22 +15,52 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 196px;
 }
 
-.menu-buttons{
+.dark-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.dark-logo img {
+    width: 52px;
+    height: 38px;
+}
+
+.dark-logo-user {
+    font-family: 'Anta', sans-serif;
+    font-size: 14px;
+    line-height: 120%;
+    color: #F8F5EC;
+}
+
+.dark-logo-job {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 120%;
+    color: #262E34;
+}
+
+
+.menu-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 196px;
+    gap: 32px;
+    max-width: 677px;
 }
 
 .menu-buttons a {
     text-decoration: none;
     cursor: pointer;
     transition: all 125ms ease;
+    width: 100px;
 }
 
-.menu-buttons span{
+.menu-buttons span {
     font-size: 26px;
     color: #262E34;
     font-weight: 500;
@@ -44,8 +72,8 @@
 .menu-buttons a.active span {
     background-image: url('/assets/img/menubar/Ellipse 24.png');
     background-size: cover;
-    height: 40px;
-    width: 60px;
+    height: 56px;
+    width: 83px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,17 +82,17 @@
     color: #F8F5EC;
 }
 
-
 .menu-buttons a:hover:not(.active) span {
     color: #F8F5EC;
 }
 
-.menu-buttons:hover a.active span {
-    background-image: none;
-    height: auto;
-    width: auto;
-    display: initial;
-    color: #262E34;
+.menu-buttons a:hover:not(.active) {
+    &~a.active span {
+        background-image: none !important;
+        height: 56px;
+        width: 83px;
+        color: #262E34;
+    }
 }
 
 .menu-buttons a span:hover {
@@ -74,8 +102,8 @@
 .menu-buttons a.active span:hover {
     background-image: url('/assets/img/menubar/Ellipse 24.png') !important;
     background-size: cover !important;
-    height: 40px !important;
-    width: 60px !important;
+    height: 56px !important;
+    width: 83px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -94,7 +122,7 @@
     line-height: 120%;
     cursor: pointer;
     transition: all 125ms ease;
-    
+
     &.active {
         background-image: url('/assets/img/menubar/Ellipse 24.png');
         background-size: cover;
@@ -107,7 +135,7 @@
         background-position: center;
         color: #F8F5EC;
     }
-    
+
     &:hover:not(.active) {
         color: #F8F5EC;
     }
@@ -135,9 +163,4 @@
     justify-content: center !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
-}
-
-.dark-logo img{
-    width: 66px;
-    height: 73px;
 }

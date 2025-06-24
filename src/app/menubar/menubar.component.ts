@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './menubar.component.scss'
 })
 export class MenubarComponent {
-  activeLanguage: string = 'DE'; // Standard-Sprache
-  activeMenuItem: string = 'Why me'; // Standard aktives Menu-Item
+  activeLanguage: string = 'DE';
+  activeMenuItem: string = 'Why me'; 
 
   setActiveLanguage(language: string) {
     this.activeLanguage = language;

@@ -1,11 +1,17 @@
+.atf-container-bg {
+    max-width: 1440px;
+    margin: auto;
+    width: 100%;
+    position: relative;
+}
+
 .atf-container {
     display: flex;
     height: 746px;
     width: 90%;
-    margin: auto;
     padding-top: 41px;
-    max-width: 1440px;
     justify-content: space-between;
+    margin: auto;
 }
 
 .background-image {
@@ -37,6 +43,31 @@
     display: flex;
     align-items: center;
     margin-top: 22px;
+}
+
+.user-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-logo img {
+    height: 38px;
+    width: 56px;
+}
+
+.user-logo-name {
+    font-family: 'Anta', sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+    color: #F8F5EC;
+}
+
+.user-logo-job {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 120%;
+    color: #89BCD9;
 }
 
 .user-info-container {
@@ -71,6 +102,7 @@
 
 #social-media-email {
     background-image: url('/assets/img/social_media/email/email_default.png');
+
     &:hover {
         background-image: url('/assets/img/social_media/email/email_hover_blue.png');
     }
@@ -78,6 +110,7 @@
 
 #social-media-github {
     background-image: url('/assets/img/social_media/github/github_default.png');
+
     &:hover {
         background-image: url('/assets/img/social_media/github/github_hover_blue.png');
     }
@@ -85,16 +118,11 @@
 
 #social-media-linkedin {
     background-image: url('/assets/img/social_media/linkedin/linkedin_default.png');
+
     &:hover {
         background-image: url('/assets/img/social_media/linkedin/linkedin_hover_blue.png');
     }
 }
-
-.user-logo img{
-    width: 66px;
-    height: 73px;
-}
-
 
 .atf-user-info {
     text-align: center;
