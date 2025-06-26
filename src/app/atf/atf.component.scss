@@ -81,7 +81,8 @@
     display: flex;
     position: relative;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 38%;
 }
 
 
@@ -124,8 +125,14 @@
     }
 }
 
+.user-logo-container {
+    display: flex;
+    align-items: end;
+}
+
 .atf-user-info {
     text-align: center;
+    padding: 52px 0 104px 0;
 }
 
 .atf-user-info h1 {

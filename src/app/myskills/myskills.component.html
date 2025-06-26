@@ -1,1 +1,23 @@
-<p>myskills works!</p>
+<div class="my-skills-bg">
+    <section class="my-skills-container">
+        <div class="my-skills-header">
+            <h1>My Skills</h1>
+        </div>
+        <div class="my-skills-content">
+            <div class="my-skills-logos">
+                @for (logo of skillsLogos; track $index) {
+                <img [src]="logo" alt="skill_logo" class="skill-logo">
+                }
+            </div>
+            <div class="my-skills-current-learning">
+                <h2>I am currently learning</h2>
+                <div class="current-learning-logos">
+                    <img src="assets/img/skills_logos/angular.png" alt="angular">
+                    <img src="assets/img/skills_logos/firebase.png" alt="firebase">
+                </div>
+                <span>I would like to expand my knowledge of Angular and Firebase through additional projects in order
+                    to develop more complex software solutions.</span>
+            </div>
+        </div>
+    </section>
+</div>

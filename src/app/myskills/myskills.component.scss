@@ -1,0 +1,90 @@
+.my-skills-bg {
+    width: 100%;
+    max-width: 1440px;
+    z-index: 3;
+    position: relative;
+    margin: auto;
+}
+
+.my-skills-container {
+    padding: 140px 0px;
+    gap: 80px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-skills-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.my-skills-header h1 {
+    font-family: 'Anta', sans-serif;
+    font-size: 60px;
+    line-height: 120%;
+    color: #89BCD9;
+    display: flex;
+    justify-content: center;
+}
+
+.my-skills-logos {
+    display: grid;
+    max-width: 409px;
+    grid-template-columns: repeat((auto-fill, minmax(66px, 1fr)));
+    gap: 40px;
+}
+
+.skill-logo {
+    height: 100px;
+    width: 66px;
+
+}
+
+.my-skills-current-learning {
+    background-image: url('/assets/img/skills_logos/ellipse_25.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+        background-image: url('/assets/img/skills_logos/ellipse_25_hover.svg');
+    }
+
+    > h2 {
+        font-size: 18px;
+        line-height: 120%;
+    }
+
+    > span {
+        width: 80%;
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+.current-learning-logos {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.current-learning-logos img {
+    width: 36px;
+    height: 54px;
+}
