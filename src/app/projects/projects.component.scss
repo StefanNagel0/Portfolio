@@ -1,0 +1,218 @@
+.projects-bg {
+    width: 100%;
+    // max-width: 1440px;
+    z-index: 3;
+    position: relative;
+    margin: auto;
+    background-color: #262E34;
+}
+
+.projects-container {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-header h1 {
+    font-family: 'Anta', sans-serif;
+    font-size: 60px;
+    line-height: 120%;
+    color: #89BCD9;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.projects-tabs {
+    display: flex;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+    max-width: 1440px;
+    gap: 3%;
+}
+
+.project-tab {
+    // background-color: #2D373F;
+    color: #89BCD9;
+    padding: 16px 24px;
+    cursor: pointer;
+    // flex: 1;
+    text-align: center;
+    transition: all 0.2s ease;
+    font-size: 30px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+
+
+    &:hover:not(.active) {
+        color: #F8F5EC;
+    }
+
+    &.active {
+        background-color: #2C3840;
+        color: #F8F5EC;
+        border-radius: 30px 30px 0 0;
+    }
+}
+
+.project-background {
+    background-color: #2C3840;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    padding: 32px 0;
+
+}
+
+.project-content {
+    display: flex;
+    gap: 60px;
+    width: 90%;
+    margin: auto;
+
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
+}
+
+.project-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-section {
+    display: flex;
+    gap: 20px;
+
+    .section-dot {
+        background-image: url('/assets/img/projects/ellipse_8.svg');
+        width: 29px;
+        height: 26px;
+        margin-top: -2px;
+        flex-shrink: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .section-content {
+        h2 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-weight: 300;
+
+            .duration {
+                font-size: 18px;
+                font-weight: 300;
+
+            }
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 120%;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+    }
+}
+
+.project-showcase {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-technologies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        font-size: 18px;
+        color: #F8F5EC;
+        margin-bottom: 16px;
+    }
+
+    .tech-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+
+        .tech-icon {
+            width: 40px;
+            height: 60px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+        max-width: 453px;
+        max-height: 312px;
+        object-fit: cover;
+        border: 1px solid rgba(248, 245, 236, 0.1);
+        border-radius: 30px;
+    }
+}
+
+.project-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+
+    .btn-action {
+        padding: 12px 24px;
+        border-radius: 30px;
+        font-weight: 300;
+        font-size: 18px;
+        text-align: center;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        display: inline-block;
+
+        &:first-child {
+            background-color: #89BCD9;
+            color: #262E34;
+
+            &:hover {
+                background-color: #F8F5EC;
+            }
+        }
+
+        &:last-child {
+            border: 1px solid #89BCD9;
+            color: #89BCD9;
+
+            &:hover {
+                background-color: #3F464A;
+            }
+        }
+    }
+}

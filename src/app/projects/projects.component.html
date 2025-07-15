@@ -1,1 +1,87 @@
-<p>projects works!</p>
+<div class="projects-bg">
+    <section class="projects-container">
+        <div class="projects-header">
+            <h1>My Projects</h1>
+        </div>
+
+        <div class="projects-tabs">
+            @for (project of projects; track project.id) {
+            <div class="project-tab" [class.active]="project.isExpanded" (click)="toggleProject(project.id)">
+                {{ project.id }}. {{ project.title }}
+            </div>
+            }
+        </div>
+
+        @for (project of projects; track project.id) {
+        @if (project.isExpanded) {
+        <div class="project-background">
+            <div class="project-content">
+                <div class="project-details">
+                    <!-- About the project wird immer angezeigt -->
+                    <div class="project-section">
+                        <div class="section-dot"></div>
+                        <div class="section-content">
+                            <h2>About the project <span class="duration">Duration: {{ project.duration }}</span></h2>
+                            <p>{{ project.descriptionShort }}</p>
+                            <p>{{ project.descriptionLong }}</p>
+                        </div>
+                    </div>
+
+                    <!-- Die folgenden Abschnitte werden nur angezeigt, wenn es nicht das "Ongoing Project" ist -->
+                    @if (project.title !== 'Ongoing Project') {
+                        <div class="project-section">
+                            <div class="section-dot"></div>
+                            <div class="section-content">
+                                <h2>How I have organised my work process</h2>
+                                <p>{{ project.workProcess }}</p>
+                            </div>
+                        </div>
+
+                        <!-- Bedingte Anzeige: entweder Team Experience oder Learning Experience -->
+                        <div class="project-section">
+                            <div class="section-dot"></div>
+                            <div class="section-content">
+                                @if (project.teamExperience) {
+                                <h2>My group work experience</h2>
+                                <p>{{ project.teamExperience }}</p>
+                                } @else if (project.learningExperience) {
+                                <h2>What I have learnt</h2>
+                                <p>{{ project.learningExperience }}</p>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="project-showcase">
+                    <div class="project-technologies">
+                        <h3>Technologies</h3>
+                        <div class="tech-icons">
+                            @for (tech of project.technologies; track $index) {
+                            <div class="tech-icon">
+                                <img src="/assets/img/projects/skills_w_no_name/{{ tech.toLowerCase().replace(' ', '_') }}.svg"
+                                    alt="{{ tech }}">
+                            </div>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="project-image">
+                        <img [src]="project.imagePath" [alt]="project.title">
+                    </div>
+
+                    <div class="project-actions">
+                        <a [href]="project.liveTestUrl" target="_blank" class="btn-action">Live Test</a>
+                        <a [href]="project.githubUrl" target="_blank" class="btn-action">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        }
+        }
+    </section>
+</div>

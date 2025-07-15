@@ -28,21 +28,35 @@ button {
 @font-face {
     font-family: 'josefin-sans';
     src: url('assets/fonts/josefin-sans-v33-latin-200.woff2') format('woff2');
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'josefin-sans';
-    src: url('assets/fonts/josefin-sans-v33-latin-200.woff2') format('woff2');
+    src: url('assets/fonts/josefin-sans-v33-latin-300.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'josefin-sans';
-    src: url('assets/fonts/josefin-sans-v33-latin-200.woff2') format('woff2');
+    src: url('assets/fonts/josefin-sans-v33-latin-500.woff2') format('woff2');
     font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'josefin-sans';
+    src: url('assets/fonts/josefin-sans-v33-latin-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'josefin-sans';
+    src: url('assets/fonts/josefin-sans-v33-latin-700.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
 
