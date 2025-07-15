@@ -1,0 +1,91 @@
+.feedback-bg {
+    width: 100%;
+    max-width: 1440px;
+    z-index: 3;
+    position: relative;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.feedback-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    > h1 {
+        font-size: 32px;
+        line-height: 120%;
+        color: #89BCD9;
+        text-align: center;
+        margin-bottom: 80px;
+        max-width: 850px;
+    }
+}
+
+.feedback-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.feedback-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-image: url('/assets/img/feedback/Ellipse 02.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    .feedback-content {
+        padding: 40px 30px;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 85%;
+        
+        h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #F8F5EC;
+            font-weight: 600;
+        }
+        
+        .project-tag {
+            font-size: 16px;
+            color: #89BCD9;
+            margin-bottom: 16px;
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.4;
+            margin-bottom: 16px;
+            color: #F8F5EC;
+        }
+        
+        .linkedin-link {
+            color: #89BCD9;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: auto;
+            transition: color 0.2s ease;
+            
+            &:hover {
+                color: #F8F5EC;
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,1 +1,23 @@
-<p>feedback works!</p>
+<div class="feedback-bg">
+    <section class="feedback-container">
+        <h1>Need a teamplayer? Here what my colleagues said about me</h1>
+        
+        <div class="feedback-cards">
+            @for (feedback of feedbacks; track $index) {
+            <div class="feedback-card">
+                <div class="feedback-content">
+                    <h2>{{ feedback.name }}</h2>
+                    @if (feedback.project) {
+                        <div class="project-tag">Project {{ feedback.project }}</div>
+                    }
+                    <p>"{{ feedback.text }}"</p>
+                    
+                    <!-- @if (feedback.linkedInProfile) {
+                        <a href="{{ feedback.linkedInProfile }}" class="linkedin-link">Linked In Profile</a>
+                    } -->
+                </div>
+            </div>
+            }
+        </div>
+    </section>
+</div>
