@@ -22,7 +22,7 @@ export class ProjectsComponent {
       technologies: ['angular', 'typescript', 'firebase'],
       imagePath: '/assets/img/projects/join.png',
       liveTestUrl: 'https://dabubble.example.com',
-      githubUrl: 'https://github.com/username/dabubble',
+      githubUrl: 'https://github.com/StefanNagel0/Join',
       isExpanded: true
     },
     {
@@ -36,7 +36,7 @@ export class ProjectsComponent {
       technologies: ['javascript', 'html', 'css'],
       imagePath: '/assets/img/projects/el_pollo_loco.png',
       liveTestUrl: 'https://sharkie.example.com',
-      githubUrl: 'https://github.com/username/sharkie',
+      githubUrl: 'https://github.com/StefanNagel0/El-Pollo-Loco',
       isExpanded: false
     },
     {
@@ -50,7 +50,7 @@ export class ProjectsComponent {
       technologies: ['html', 'css', 'javascript'],
       imagePath: '/assets/img/projects/pokedex.png',
       liveTestUrl: 'https://join.example.com',
-      githubUrl: 'https://github.com/username/join',
+      githubUrl: 'https://github.com/StefanNagel0/Pokedex',
       isExpanded: false
     },
     {
