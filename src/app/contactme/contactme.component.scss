@@ -1,0 +1,313 @@
+.contactme-bg {
+    width: 100%;
+    max-width: 1440px;
+    z-index: 3;
+    position: relative;
+    margin: auto;
+    padding: 80px 0;
+    color: #F8F5EC;
+}
+
+.contactme-title {
+    display: flex;
+    justify-content: flex-end;
+    gap: 38%;
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Anta', sans-serif;
+    font-size: 60px;
+    line-height: 120%;
+    color: #89BCD9;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.arrow-up {
+    width: 38px;
+    height: 89px;
+    background-image: url('/assets/img/arrow/arrow_up.svg');
+    cursor: pointer;
+    transition: background-image 125ms ease-in-out;
+}
+
+.arrow-up:hover {
+    background-image: url('/assets/img/arrow/arrow_up_hover.svg');
+}
+
+.contactme-header {
+    display: flex;
+    margin-bottom: 40px;
+    width: 80%;
+    margin: auto;
+}
+
+.contactme-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contactme-text {
+    padding: 16px;
+    width: 60%;
+
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: start;
+    }
+}
+
+.contact-form-container {
+    display: grid;
+    gap: 32px;
+    width: 80%;
+    margin: auto;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 16px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    cursor: pointer;
+
+    a {
+        color: #F8F5EC;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .icon-container {
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: background-image 0.2s ease;
+    }
+
+    // Email-Methode
+    .email-icon {
+        background-image: url('/assets/img/contactme/email_default.svg');
+    }
+
+    // Phone-Methode
+    .phone-icon {
+        background-image: url('/assets/img/contactme/phone_default.svg');
+    }
+
+    // Hover-Effekte
+    &:hover {
+        a {
+            color: #89BCD9;
+        }
+
+        .email-icon {
+            background-image: url('/assets/img/contactme/email_hover.svg');
+        }
+
+        .phone-icon {
+            background-image: url('/assets/img/contactme/phone_hover.svg');
+        }
+    }
+
+    // Click-Effekt für Email
+    &.email-method.clicked {
+        .email-icon {
+            background-image: url('/assets/img/contactme/email_click.svg');
+        }
+
+        a {
+            color: #89BCD9;
+        }
+    }
+}
+
+// Formular Styling
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-row {
+    display: flex;
+    gap: 24px;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+
+    .form-group {
+        flex: 1;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+        color: #89BCD9;
+        font-size: 14px;
+    }
+
+    input,
+    textarea {
+        background-color: #262E34;
+        border: 1px solid #89BCD9;
+        border-radius: 30px;
+        padding: 12px 16px;
+        color: #F8F5EC;
+        font-size: 16px;
+        transition: all 0.2s ease;
+        width: 100%;
+
+        &:hover {
+            border-color: rgba(137, 188, 217, 0.6);
+        }
+
+        &:focus {
+            outline: none;
+            border-color: #89BCD9;
+            box-shadow: 0 0 0 2px rgba(137, 188, 217, 0.2);
+        }
+
+        &.invalid {
+            border-color: #ff5252;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+}
+
+.error-message {
+    color: #ff5252;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+// Checkbox Styling
+.privacy-policy {
+    margin: 8px 0;
+}
+
+.checkbox-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    .custom-checkbox {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked+.checkbox-label .checkbox-icon {
+            background-image: url('/assets/img/contactme/checkbox_check.svg');
+            background-color: transparent;
+        }
+
+        &:focus+.checkbox-label .checkbox-icon {
+            box-shadow: 0 0 0 2px rgba(137, 188, 217, 0.3);
+        }
+    }
+
+    .checkbox-label {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        cursor: pointer;
+
+        .checkbox-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            background-image: url('/assets/img/contactme/checkbox_default.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        &:hover .checkbox-icon {
+            background-image: url('/assets/img/contactme/checkbox_hover.svg');
+        }
+
+        .checkbox-text {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    }
+}
+
+.privacy-link {
+    color: #89BCD9;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: #F8F5EC;
+    }
+}
+
+// Button Styling
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+.send-button {
+    background-color: transparent;
+    border: 1px solid #89BCD9;
+    color: #89BCD9;
+    border-radius: 30px;
+    padding: 12px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: rgba(137, 188, 217, 0.1);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        border-color: rgba(137, 188, 217, 0.5);
+    }
+}
+
+// Responsive Anpassungen
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .contactme-text p {
+        font-size: 16px;
+    }
+}

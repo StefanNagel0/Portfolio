@@ -6,16 +6,16 @@
             <span class="dark-logo-job">developer</span>
         </div>
         <div class="menu-buttons">
-            <a href="#" [class.active]="activeMenuItem === 'Why me'" (click)="setActiveMenuItem('Why me')">
+            <a (click)="setActiveMenuItem('Why me')" [class.active]="activeMenuItem === 'Why me'">
                 <span>Why me</span>
             </a>
-            <a href="#" [class.active]="activeMenuItem === 'Skills'" (click)="setActiveMenuItem('Skills')">
+            <a (click)="setActiveMenuItem('Skills')" [class.active]="activeMenuItem === 'Skills'">
                 <span>Skills</span>
             </a>
-            <a href="#" [class.active]="activeMenuItem === 'Projects'" (click)="setActiveMenuItem('Projects')">
+            <a (click)="setActiveMenuItem('Projects')" [class.active]="activeMenuItem === 'Projects'">
                 <span>Projects</span>
             </a>
-            <a href="#" [class.active]="activeMenuItem === 'Contact'" (click)="setActiveMenuItem('Contact')">
+            <a (click)="setActiveMenuItem('Contact')" [class.active]="activeMenuItem === 'Contact'">
                 <span>Contact</span>
             </a>
         </div>

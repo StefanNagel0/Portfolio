@@ -1,1 +1,85 @@
-<p>contactme works!</p>
+<div class="contactme-bg">
+    <div class="contactme-title">
+        <h1>Contact me</h1>
+        <div class="arrow-up">
+        </div>
+    </div>
+
+
+    <div class="contactme-container">
+        <div class="contactme-header">
+            <div class="contactme-text">
+                <p>Encourage people to contact you and describe what role you are interested in. Show that you will add
+                    value to their projects through your work. Example: Feel free to get in touch with job offers or
+                    opportunities such as...</p>
+            </div>
+
+            <div class="contact-info">
+                <!-- Emailkontakt -->
+                <div class="contact-method email-method" (click)="emailClicked = !emailClicked"
+                    [class.clicked]="emailClicked">
+                    <div class="icon-container email-icon"></div>
+                    <a href="mailto:fahrer.developer@gmail.com">E-mail: fahrer.developergmail.com</a>
+                </div>
+
+                <!-- Telefonkontakt -->
+                <div class="contact-method phone-method">
+                    <div class="icon-container phone-icon"></div>
+                    <a href="tel:+4915712345678">Tel: 0157 123 456 68</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="contact-form-container">
+            <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" formControlName="name"
+                            [class.invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                        @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+                        <div class="error-message">Name ist erforderlich (mind. 2 Zeichen).</div>
+                        }
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" formControlName="email"
+                            [class.invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                        @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                        <div class="error-message">Gültige E-Mail erforderlich.</div>
+                        }
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="6" formControlName="message"
+                        [class.invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"></textarea>
+                    @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+                    <div class="error-message">Nachricht ist erforderlich (mind. 10 Zeichen).</div>
+                    }
+                </div>
+
+                <div class="privacy-policy">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="privacy" formControlName="privacy" class="custom-checkbox">
+                        <label for="privacy" class="checkbox-label">
+                            <span class="checkbox-icon"></span>
+                            <span class="checkbox-text">I've read the <a href="#" class="privacy-link">privacy
+                                    policy</a> and agree to the processing of my data as outlined.</span>
+                        </label>
+                    </div>
+                    @if (contactForm.get('privacy')?.invalid && contactForm.get('privacy')?.touched) {
+                    <div class="error-message">Du musst die Datenschutzerklärung akzeptieren.</div>
+                    }
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" [disabled]="contactForm.invalid" class="send-button">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
