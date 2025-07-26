@@ -42,6 +42,7 @@ h1 {
     margin-bottom: 40px;
     width: 80%;
     margin: auto;
+    padding-bottom: 48px;
 }
 
 .contactme-container {
@@ -58,6 +59,13 @@ h1 {
         font-size: 18px;
         line-height: 1.5;
         text-align: start;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: start;
+        font-weight: 400;
     }
 }
 
@@ -157,52 +165,98 @@ h1 {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    margin-bottom: 16px;
+    position: relative;
 
-    label {
-        color: #89BCD9;
-        font-size: 14px;
-    }
+    .input-container {
+        position: relative;
 
-    input,
-    textarea {
-        background-color: #262E34;
-        border: 1px solid #89BCD9;
-        border-radius: 30px;
-        padding: 12px 16px;
-        color: #F8F5EC;
-        font-size: 16px;
-        transition: all 0.2s ease;
-        width: 100%;
-
-        &:hover {
-            border-color: rgba(137, 188, 217, 0.6);
+        label {
+            color: #89BCD9;
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+            padding-left: 16px;
         }
 
-        &:focus {
-            outline: none;
-            border-color: #89BCD9;
-            box-shadow: 0 0 0 2px rgba(137, 188, 217, 0.2);
+        .error-message {
+            color: #ff5252;
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+            padding-left: 16px;
         }
 
-        &.invalid {
-            border-color: #ff5252;
-        }
-    }
+        input,
+        textarea {
+            background-color: #262E34;
+            border: 1px solid #89BCD9;
+            border-radius: 30px;
+            padding: 12px 16px;
+            color: #F8F5EC;
+            font-size: 16px;
+            transition: all 0.2s ease;
+            width: 100%;
+            max-height: 140px;
 
-    textarea {
-        resize: vertical;
-        min-height: 120px;
+            &:focus {
+                outline: none;
+                background-color: rgba(137, 188, 217, 0.1);
+            }
+
+            &.invalid {
+                border-color: #ff5252;
+                background-color: rgba(255, 82, 82, 0.05);
+            }
+
+            &.valid {
+                border-color: #89BCD9;
+                background-color: transparent;
+            }
+        }
+
+        .check-icon {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-image: url('/assets/img/contactme/icon _done_.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            right: 15px;
+        }
+
+        .input-check {
+            top: 63%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .textarea-check {
+            top: 24px;
+            transform: none;
+            z-index: 10;
+        }
+
+        textarea {
+            padding-top: 20px;
+        }
+
+        input:focus~.check-icon,
+        textarea:focus~.check-icon {
+            z-index: 20;
+        }
     }
 }
 
 .error-message {
     color: #ff5252;
-    font-size: 12px;
-    margin-top: 4px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    padding-left: 32px;
 }
 
-// Checkbox Styling
 .privacy-policy {
     margin: 8px 0;
 }
@@ -211,7 +265,7 @@ h1 {
     position: relative;
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 6px;
 
     .custom-checkbox {
         position: absolute;
@@ -240,9 +294,8 @@ h1 {
             display: inline-block;
             width: 20px;
             height: 20px;
-            border-radius: 4px;
             background-image: url('/assets/img/contactme/checkbox_default.svg');
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
             transition: all 0.2s ease;
             flex-shrink: 0;
