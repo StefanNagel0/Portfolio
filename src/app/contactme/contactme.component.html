@@ -9,9 +9,14 @@
     <div class="contactme-container">
         <div class="contactme-header">
             <div class="contactme-text">
-                <p>Encourage people to contact you and describe what role you are interested in. Show that you will add
-                    value to their projects through your work. Example: Feel free to get in touch with job offers or
-                    opportunities such as...</p>
+                <h3>I'm open to job offers or project opportunities in the field of front-end development.</h3>  <br>
+                    <br>
+                    <p>
+                    As an aspiring front-end developer, I bring a strong willingness to learn, technical curiosity, and
+                    high motivation. I quickly adapt to new technologies and contribute to projects with a fresh
+                    perspective, commitment, and clean, structured code.
+
+                    Feel free to get in touch – I'm ready for new challenges!</p>
             </div>
 
             <div class="contact-info">
@@ -25,7 +30,7 @@
                 <!-- Telefonkontakt -->
                 <div class="contact-method phone-method">
                     <div class="icon-container phone-icon"></div>
-                    <a href="tel:+4915712345678">Tel: 0157 123 456 68</a>
+                    <a href="tel:+4917664316945">Tel: 0176 643 169 45</a>
                 </div>
             </div>
         </div>
@@ -35,31 +40,52 @@
             <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="name">Your name</label>
-                        <input type="text" id="name" formControlName="name"
-                            [class.invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-                        @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
-                        <div class="error-message">Name ist erforderlich (mind. 2 Zeichen).</div>
-                        }
+                        <div class="input-container">
+                            @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+                            <div class="error-message">Your name is required</div>
+                            } @else {
+                            <label for="name">Your name</label>
+                            }
+                            <input type="text" id="name" formControlName="name"
+                                [class.invalid]="contactForm.get('name')?.invalid && (contactForm.get('name')?.touched || contactForm.get('name')?.dirty)"
+                                [class.valid]="contactForm.get('name')?.valid && (contactForm.get('name')?.touched || contactForm.get('name')?.dirty)">
+                            <div class="check-icon input-check"
+                                *ngIf="contactForm.get('name')?.valid && (contactForm.get('name')?.touched || contactForm.get('name')?.dirty)">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" formControlName="email"
-                            [class.invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-                        @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
-                        <div class="error-message">Gültige E-Mail erforderlich.</div>
-                        }
+                        <div class="input-container">
+                            @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                            <div class="error-message">Your Email is required</div>
+                            } @else {
+                            <label for="email">Your Email</label>
+                            }
+                            <input type="email" id="email" formControlName="email"
+                                [class.invalid]="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty)"
+                                [class.valid]="contactForm.get('email')?.valid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty)">
+                            <div class="check-icon input-check"
+                                *ngIf="contactForm.get('email')?.valid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty)">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" rows="6" formControlName="message"
-                        [class.invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"></textarea>
-                    @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
-                    <div class="error-message">Nachricht ist erforderlich (mind. 10 Zeichen).</div>
-                    }
+                    <div class="input-container">
+                        @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+                        <div class="error-message">Your Message is required</div>
+                        } @else {
+                        <label for="message">Your Message</label>
+                        }
+                        <textarea id="message" rows="6" formControlName="message"
+                            [class.invalid]="contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty)"
+                            [class.valid]="contactForm.get('message')?.valid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty)"></textarea>
+                        <div class="check-icon textarea-check"
+                            *ngIf="contactForm.get('message')?.valid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty)">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="privacy-policy">
@@ -72,7 +98,7 @@
                         </label>
                     </div>
                     @if (contactForm.get('privacy')?.invalid && contactForm.get('privacy')?.touched) {
-                    <div class="error-message">Du musst die Datenschutzerklärung akzeptieren.</div>
+                    <div class="error-message">Please accept the privacy policy.</div>
                     }
                 </div>
 
