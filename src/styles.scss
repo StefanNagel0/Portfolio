@@ -18,6 +18,13 @@ button {
     cursor: pointer;
 }
 
+.section-heading {
+    display: inline-block; // oder block, falls nötig
+    will-change: transform; // für flüssige Animation
+    position: relative; // wichtig für transform!
+    z-index: 2;
+}
+
 @font-face {
     font-family: 'Anta';
     src: url('assets/fonts/anta-v1-latin-regular.woff2') format('woff2');
@@ -59,5 +66,3 @@ button {
     font-weight: 700;
     font-style: normal;
 }
-
-

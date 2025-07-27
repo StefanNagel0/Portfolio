@@ -1,10 +1,13 @@
 .menubar-container-bg {
     background-color: #89BCD9;
     width: 100%;
-    max-width: 1440px;
-    z-index: 3;
-    position: relative;
-    margin: auto;
+    z-index: 999; // Hoher z-index, damit die Menubar über anderen Elementen bleibt
+    position: sticky; // Wichtig für Sticky-Verhalten
+    top: 0; // An oberem Bildschirmrand haften
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Optionaler Schatten für bessere Sichtbarkeit
+    transition: all 0.3s ease; // Für weichen Übergang bei Erscheinen/Verschwinden
 }
 
 .menubar-container {
@@ -82,19 +85,6 @@
     color: #F8F5EC;
 }
 
-.menu-buttons a:hover:not(.active) span {
-    color: #F8F5EC;
-}
-
-.menu-buttons a:hover:not(.active) {
-    &~a.active span {
-        background-image: none !important;
-        height: 56px;
-        width: 83px;
-        color: #262E34;
-    }
-}
-
 .menu-buttons a span:hover {
     color: #F8F5EC !important;
 }
@@ -164,3 +154,17 @@
     background-repeat: no-repeat !important;
     background-position: center !important;
 }
+
+/* menubar.component.scss */
+// @keyframes bounce-effect {
+//   0%   { transform: translateY(0); }
+//   20%  { transform: translateY(-18px); }
+//   40%  { transform: translateY(10px); }
+//   60%  { transform: translateY(-6px); }
+//   80%  { transform: translateY(3px); }
+//   100% { transform: translateY(0); }
+// }
+
+// .bounce-animate {
+//   animation: bounce-effect 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+// }

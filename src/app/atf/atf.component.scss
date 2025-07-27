@@ -21,11 +21,16 @@
     width: 580px;
     height: 616px;
     background-image: url('/assets/img/header/picture_bg_default.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(-45deg);
     z-index: 1;
+
+    &:hover {
+        background-image: url('/assets/img/header/picture_bg_hover.png');
+        transition: background-image 125ms ease-in-out;
+    }
 }
 
 .portfolio-img-container img {
@@ -36,6 +41,7 @@
     height: 683px;
     width: 535px;
     padding-left: 25px;
+    pointer-events: none;
 }
 
 .portfolio-img-container {
